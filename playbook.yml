@@ -1,0 +1,78 @@
+- name: Deploy Local TTS API with virtualenv
+  hosts: tts_servers
+  become: true
+
+  vars:
+    app_dir: /opt/tts-local
+    venv_dir: /opt/tts-local/venv
+    python_path: /opt/tts-local/venv/bin/python
+
+  tasks:
+    - name: Install required system packages
+      pacman:
+        name:
+          - espeak-ng
+          - python
+          - python-pip
+          - python-virtualenv
+          - sof-firmware
+        state: present
+        update_cache: yes
+
+    - name: Create app directory
+      file:
+        path: "{{ app_dir }}"
+        state: directory
+        mode: '0755'
+
+    - name: Create virtual environment
+      command: python -m venv {{ venv_dir }}
+      args:
+        creates: "{{ venv_dir }}/bin/activate"
+
+    - name: Install Flask inside virtualenv
+      pip:
+        name: flask
+        virtualenv: "{{ venv_dir }}"
+
+    - name: Copy TTS server script
+      copy:
+        src: files/tts_server.py
+        dest: "{{ app_dir }}/tts_server.py"
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Set up alsa configuration
+      copy:
+        src: files/asound.conf
+        dest: /etc/asound.conf
+      loop:
+        - src: files/asound.state
+          dest: /var/lib/alsa/asound.state
+
+    - name: Create systemd service
+      template:
+        src: templates/tts_local.service.j2
+        dest: "{{ app_dir }}/tts_local.service"
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Link systemd unit file
+      command: systemctl link {{ app_dir }}/tts_local.service
+      args:
+        creates: "/etc/systemd/system/tts_local.service"
+
+    - name: Reload systemd
+      systemd:
+        daemon_reload: true
+
+    - name: Enable and start the TTS service
+      systemd:
+        name: tts_local.service
+        enabled: true
+        state: started
+    
+    - name: Restart the computer
+      reboot:

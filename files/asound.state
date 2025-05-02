@@ -1,0 +1,828 @@
+state.sofessx8336 {
+	control.1 {
+		iface MIXER
+		name 'Headphone Playback Volume'
+		value.0 3
+		value.1 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin -4800
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'Headphone Mixer Volume'
+		value.0 11
+		value.1 11
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 11'
+			dbmin -1200
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'Playback Polarity'
+		value Normal
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Normal
+			item.1 'R Invert'
+			item.2 'L Invert'
+			item.3 'L + R Invert'
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'DAC Playback Volume'
+		value.0 182
+		value.1 182
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 192'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -500
+			dbvalue.1 -500
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'DAC Soft Ramp Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'DAC Soft Ramp Rate'
+		value 4
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 4'
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'DAC Notch Filter Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'DAC Double Fs Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'DAC Stereo Enhancement'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'DAC Mono Mix Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'Capture Polarity'
+		value Normal
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Normal
+			item.1 Invert
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'Mic Boost Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'ADC Capture Volume'
+		value 115
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 192'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -3850
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'ADC PGA Gain Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 10'
+			dbmin -350
+			dbmax 2400
+			dbvalue.0 -350
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'ADC Soft Ramp Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'ADC Double Fs Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'ALC Capture Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'ALC Capture Max Volume'
+		value 28
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 28'
+			dbmin -650
+			dbmax 3550
+			dbvalue.0 3550
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'ALC Capture Min Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 28'
+			dbmin -1200
+			dbmax 3000
+			dbvalue.0 -1200
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'ALC Capture Target Volume'
+		value 11
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 11'
+			dbmin -1650
+			dbmax -150
+			dbvalue.0 -150
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'ALC Capture Hold Time'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 10'
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'ALC Capture Decay Time'
+		value 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 10'
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'ALC Capture Attack Time'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 10'
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'ALC Capture Noise Gate Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.25 {
+		iface MIXER
+		name 'ALC Capture Noise Gate Threshold'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+		}
+	}
+	control.26 {
+		iface MIXER
+		name 'ALC Capture Noise Gate Type'
+		value 'Constant PGA Gain'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Constant PGA Gain'
+			item.1 'Mute ADC Output'
+		}
+	}
+	control.27 {
+		iface CARD
+		name 'Headphone Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.28 {
+		iface CARD
+		name 'Headset Mic Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.29 {
+		iface MIXER
+		name 'Speaker Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.30 {
+		iface MIXER
+		name 'Headphone Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.31 {
+		iface MIXER
+		name 'Headset Mic Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.32 {
+		iface MIXER
+		name 'Internal Mic Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.33 {
+		iface CARD
+		name 'HDMI/DP,pcm=5 Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.35 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.36 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.37 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.38 {
+		iface PCM
+		device 5
+		name ELD
+		value '100007006610000100000000000000005d8480234d414c415441090707000000'
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 32
+		}
+	}
+	control.39 {
+		iface CARD
+		name 'HDMI/DP,pcm=6 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.40 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 1
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.41 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 1
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.42 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 1
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.43 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 1
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.44 {
+		iface PCM
+		device 6
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.45 {
+		iface CARD
+		name 'HDMI/DP,pcm=7 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.46 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 2
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.47 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 2
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.48 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 2
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.49 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 2
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.50 {
+		iface PCM
+		device 7
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.51 {
+		iface PCM
+		device 5
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write volatile'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.52 {
+		iface PCM
+		device 6
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write volatile'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.53 {
+		iface PCM
+		device 7
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write volatile'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.54 {
+		iface MIXER
+		name 'PGA1.0 1 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.55 {
+		iface MIXER
+		name 'PGA2.0 2 PCM 0 Capture Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 40'
+			dbmin -9999999
+			dbmax 1600
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.56 {
+		iface MIXER
+		name 'PGA5.0 5 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.57 {
+		iface MIXER
+		name 'PGA6.0 6 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.58 {
+		iface MIXER
+		name 'PGA7.0 7 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.59 {
+		iface MIXER
+		name 'Differential Mux'
+		value lin1-rin1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 lin1-rin1
+			item.1 lin2-rin2
+			item.2 'lin1-rin1 with 20db Boost'
+			item.3 'lin2-rin2 with 20db Boost'
+		}
+	}
+	control.60 {
+		iface MIXER
+		name 'Digital Mic Mux'
+		value 'dmic disable'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'dmic disable'
+			item.1 'dmic data at high level'
+			item.2 'dmic data at low level'
+		}
+	}
+	control.61 {
+		iface MIXER
+		name 'DAC Source Mux'
+		value 'LDATA TO LDAC, RDATA TO RDAC'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'LDATA TO LDAC, RDATA TO RDAC'
+			item.1 'LDATA TO LDAC, LDATA TO RDAC'
+			item.2 'RDATA TO LDAC, RDATA TO RDAC'
+			item.3 'RDATA TO LDAC, LDATA TO RDAC'
+		}
+	}
+	control.62 {
+		iface MIXER
+		name 'Left Headphone Mux'
+		value lin1-rin1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 lin1-rin1
+			item.1 lin2-rin2
+			item.2 'lin-rin with Boost'
+			item.3 'lin-rin with Boost and PGA'
+		}
+	}
+	control.63 {
+		iface MIXER
+		name 'Right Headphone Mux'
+		value 'lin-rin with Boost and PGA'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 lin1-rin1
+			item.1 lin2-rin2
+			item.2 'lin-rin with Boost'
+			item.3 'lin-rin with Boost and PGA'
+		}
+	}
+	control.64 {
+		iface MIXER
+		name 'Left Headphone Mixer LLIN Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.65 {
+		iface MIXER
+		name 'Left Headphone Mixer Left DAC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.66 {
+		iface MIXER
+		name 'Right Headphone Mixer RLIN Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.67 {
+		iface MIXER
+		name 'Right Headphone Mixer Right DAC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.68 {
+		iface MIXER
+		name Pre-Amp
+		value.0 5
+		value.1 5
+		comment {
+			access 'read write user'
+			type INTEGER
+			count 2
+			range '0 - 5'
+			tlv '0000000100000008fffffe0c000001f4'
+			dbmin -500
+			dbmax 2000
+			dbvalue.0 2000
+			dbvalue.1 2000
+		}
+	}
+}

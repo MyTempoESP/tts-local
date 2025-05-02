@@ -1,0 +1,12 @@
+[Unit]
+Description=Local Text-to-Speech API
+After=network.target
+
+[Service]
+ExecStart={{ python_path }} {{ app_dir }}/tts_server.py
+WorkingDirectory={{ app_dir }}
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
