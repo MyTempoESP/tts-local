@@ -16,6 +16,7 @@
           - python-pip
           - python-virtualenv
           - sof-firmware
+          - alsa-utils
         state: present
         update_cache: true
 
