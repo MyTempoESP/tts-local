@@ -75,7 +75,4 @@
       ansible.builtin.systemd:
         name: tts_local.service
         enabled: true
-        state: started
-
-    - name: Restart the computer
-      ansible.builtin.reboot:
+        state: restarted
