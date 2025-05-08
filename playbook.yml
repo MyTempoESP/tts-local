@@ -2,6 +2,6 @@
   hosts: tts_servers
   become: true
   roles:
-    - tts_local
-    - alsa
     - rhvoice
+    - alsa
+    - tts_local

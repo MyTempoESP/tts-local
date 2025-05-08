@@ -1,0 +1,16 @@
+- name: "Setup local pkg database"
+  ansible.builtin.copy:
+    src: files/
+    dest: "{{ pkg_dest }}"
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: "Update pacman configuration"
+  ansible.builtin.blockinfile:
+    path: "/etc/pacman.conf"
+    block: |
+      [rhvoice-mytempo]
+      SigLevel = Optional TrustAll
+      Server = file://{{ pkg_dest }}
+    insertbefore: "\\[extra\\]"
