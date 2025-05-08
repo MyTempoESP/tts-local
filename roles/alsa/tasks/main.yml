@@ -1,0 +1,17 @@
+- name: Install required system packages
+  community.general.pacman:
+    name:
+      - sof-firmware
+      - alsa-utils
+    state: present
+    update_cache: true
+
+- name: Set up alsa configuration
+  ansible.builtin.copy:
+    src: files/asound.conf
+    dest: /etc/asound.conf
+    mode: '0644'
+  loop:
+    - src: files/asound.state
+      dest: /var/lib/alsa/asound.state
+      mode: '0644'

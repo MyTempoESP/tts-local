@@ -1,0 +1,3 @@
+app_dir: /opt/tts-local
+venv_dir: /opt/tts-local/venv
+python_path: /opt/tts-local/venv/bin/python

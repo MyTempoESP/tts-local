@@ -1,0 +1,7 @@
+- name: Install required system packages
+  community.general.pacman:
+    name:
+      - rhvoice
+      - rhvoice-voice-leticia-f123
+    state: present
+    update_cache: true
