@@ -34,7 +34,8 @@ def tts_worker():
         try:
             with tempfile.TemporaryFile("w+") as tf:
                 tf.write(shlex.quote(text))
-                tf.flush()
+                tf.seek(0)  # XXX: implies flush under CPython
+                # tf.flush()
                 subprocess.run(
                     [
                         "RHVoice-test",
