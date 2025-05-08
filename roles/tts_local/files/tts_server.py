@@ -25,12 +25,6 @@ def tts_worker():
 
         t = perf_counter()
 
-        logger.warning(
-            "Ignoring speed argument with value '%s' for request id %s, reason: not implemented",
-            speed,
-            req_id,
-        )
-
         try:
             with tempfile.TemporaryFile("w+") as tf:
                 tf.write(shlex.quote(text))
@@ -39,10 +33,14 @@ def tts_worker():
                 subprocess.run(
                     [
                         "RHVoice-test",
+                        "-r",
+                        speed,
                         "-p",
                         "Letícia-F123",
                     ],
                     stdin=tf,
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.STDOUT,
                 )
         except subprocess.CalledProcessError:
             # internal issue, requires some attention
@@ -58,7 +56,7 @@ def tts_worker():
         finally:
             t_stop = perf_counter()
             tts_q.task_done()
-            logger.info("Elapsed: %d", t_stop - t)
+            logger.info("Elapsed: %f", t_stop - t)
 
 
 worker_thread = threading.Thread(target=tts_worker, daemon=True)
