@@ -1,1 +1,2 @@
 pkg_dest: /var/lib/mytempo/rhvoice-mytempo
+pkgs: rhvoice rhvoice-language-brazilian-portuguese rhvoice-voice-leticia-f123

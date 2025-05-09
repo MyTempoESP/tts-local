@@ -1,11 +1,7 @@
 - name: "Include pkg configuration"
   ansible.builtin.import_tasks: pkg.yml
 
-- name: Install required system packages
-  community.general.pacman:
-    name:
-      - rhvoice
-      - rhvoice-language-brazilian-portuguese
-      - rhvoice-voice-leticia-f123
-    state: present
-    update_cache: true
+- name: "Update db and install required RHVoice packages"
+  ansible.builtin.command:
+    cmd: pacman -Sy --needed --noconfirm --noprogressbar {{ pkgs }}
+  changed_when: false
