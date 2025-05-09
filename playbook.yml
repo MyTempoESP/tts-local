@@ -1,5 +1,5 @@
 - name: Deploy Local TTS API with virtualenv
-  hosts: tts_servers
+  hosts: arch_servers
   become: true
   roles:
     - rhvoice
